@@ -5,37 +5,36 @@ import { createSunflower } from './seeds/sunflower.js'
 import { createWheat } from './seeds/wheat.js'
 import { createAsparagus } from './seeds/asparagus.js'
 
+import { addPlant } from './field.js'
 
 
 export const plantSeeds = (plan) => {
-    let seedList = []
     plan.forEach(row => {
         row.forEach(item => {
             switch(item) {
                 case 'Asparagus':
-                    seedList.push(createAsparagus());
+                    addPlant(createAsparagus());
                     break;
                 case 'Potato': 
-                    seedList.push(createPotato());
+                    addPlant(createPotato());
                     break;
                 case 'Corn': 
-                    seedList.push(createCorn());
+                    addPlant(createCorn());
                     break;
                 case 'Soybean':
-                    seedList.push(createSoybean());
+                    addPlant(createSoybean());
                     break;
                 case 'Sunflower': 
-                    seedList.push(createSunflower());
+                    addPlant(createSunflower());
                     break;
                 case 'Wheat':
-                    seedList.push(createWheat());
+                    addPlant(createWheat());
                     break;
                 default:
                     console.log(`No ${item}`);
             }
         });
     });
-
-    return seedList;
 }
+
 
