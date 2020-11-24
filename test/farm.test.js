@@ -64,8 +64,8 @@ describe("Sowing the fields with seeds", () => {
         expect(plantedSeeds)
             .toMatchObject(
                 [
-                    { type: "Corn", height: 180, output: 6 },
-                    { type: "Corn", height: 180, output: 6 },
+                    [{ type: "Corn", height: 180, output: 6 },
+                    { type: "Corn", height: 180, output: 6 }],
                     { type: "Potato", height: 32, output: 2 },
                     { type: "Asparagus", height: 24, output: 4 },
                     { type: "Soybean", height: 20, output: 4 },
